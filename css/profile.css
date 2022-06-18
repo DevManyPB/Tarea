@@ -1,0 +1,144 @@
+.flex {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(30deg,rgb(0, 218, 189),rgb(0, 127, 218));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.2s;
+}
+
+.card:hover {
+    margin-top: 50px;
+    height: 400px;
+    width: 360px;
+}
+
+.imagen {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.50);
+    transition: 0.5s;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    border: 2px solid white;
+}
+
+.card:hover .imagen{
+    width: 230px;
+    height: 230px;
+}
+
+.card .contenido {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    padding-top: 120px;
+}
+
+.card .contenido .info {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.contenido .info h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: rgb(0, 13, 34);
+    line-height: 1.2em;
+}
+
+.contenido .info h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.8;
+    color: rgb(0, 149, 255);
+}
+
+.contenido .info .datos {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    transition: 0.5s;
+    transform: translateY(150px);
+}
+
+.contenido .info  .datos p {
+    font-size: 1em;
+    color: rgb(0, 13, 34);
+    line-height: 1.2em;
+    font-weight: bold;
+}
+
+.contenido .info .datos p span {
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.contenido .info .acciones {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    transition: 0.5s;
+    transform: translateY(150px);
+}
+
+.contenido .info .acciones button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: rgb(0, 157, 255);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contenido .info .acciones button:nth-child(2){
+    color: white;
+    background-color: rgb(0, 218, 189);
+}
+
+.card:hover .info .acciones {
+    transform: translateY(0px);
+}
+
+.card:hover .info .datos {
+    transform: translateY(0px);
+}
+
+.card:hover .contenido {
+    transition: 0s;
+    padding-top: 0px;
+}
